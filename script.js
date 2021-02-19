@@ -14,8 +14,18 @@ setInterval(() => {
   slideShow()
 }, 10000);
 
-navToggle.addEventListener('click', () => {
+
+
+const toggleNav = () => {
   const navElement = document.querySelector('nav');
   navElement.classList.toggle('nav-open');
   navToggle.classList.toggle('nav-toggle-open')
+}
+
+const navLinks = document.querySelectorAll('.nav-link')
+
+navLinks.forEach(link => {
+  link.addEventListener('click', toggleNav)
 })
+
+navToggle.addEventListener('click', toggleNav)

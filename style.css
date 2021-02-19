@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Newsreader', serif;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -11,7 +13,7 @@ body{
 }
 
 .nav-toggle{
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   margin: 2rem;
@@ -22,19 +24,21 @@ body{
 
 .nav-toggle-open{
   transform: translateX(-43vw);
+  color: black;
 }
 
 nav{
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: green;
+  background-color: rgb(204, 255, 144);
   transition: 1000ms ease-in-out;
   transform: translateX(100%);
   overflow: hidden;
+  color: black;
 }
 
 .nav-open{
@@ -49,6 +53,11 @@ nav{
   align-items: center;
   align-content: center;
   height: 100%;
+}
+
+.nav-link{
+  margin: 2rem;
+  font-size: 4rem;
 }
 
 .container{
@@ -82,10 +91,16 @@ nav{
 .call-to-action{
   height: 100%;
   width: 50%;
-  font-family: 'Ballet', cursive;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+}
+
+.shop, .contact, .about{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
 }
