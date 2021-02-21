@@ -19,7 +19,16 @@ setInterval(() => {
 const toggleNav = () => {
   const navElement = document.querySelector('nav');
   navElement.classList.toggle('nav-open');
-  navToggle.classList.toggle('nav-toggle-open')
+  setTimeout(() => {
+    if(navToggle.getAttribute('data-toggle') === 'Menu'){
+      navToggle.setAttribute('data-toggle','               →');
+    }else{
+      navToggle.setAttribute('data-toggle','Menu');
+    }
+     
+  }, 500);
+  
+  navToggle.classList.toggle('nav-toggle-open');
 }
 
 const navLinks = document.querySelectorAll('.nav-link')

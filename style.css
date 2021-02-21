@@ -23,8 +23,14 @@ body{
 }
 
 .nav-toggle-open{
-  transform: translateX(-43vw);
+  transform: translateX(-41vw);
   color: black;
+  transition: 1000ms ease-in-out;
+}
+
+.nav-toggle::after{
+  content: attr(data-toggle);
+  font-size: 3rem;
 }
 
 nav{
@@ -96,6 +102,21 @@ nav{
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+  flex-direction: column;
+}
+
+.call-to-action h1, .call-to-action h2{
+  background: url('./images/sunflowers.jpg') no-repeat center;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 10rem;
+  font-weight: normal;
+}
+
+.call-to-action h2{
+  font-size: 3rem;
+  margin: 2rem;
 }
 
 .shop, .contact, .about{
